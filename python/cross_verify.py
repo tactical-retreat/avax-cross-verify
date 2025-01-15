@@ -58,7 +58,7 @@ def fetch_contract(url: str, contract_address: str, api_key: str):
     if data['status'] == '1' and data['message'] == 'OK':
         return data['result'][0]
     else:
-        raise Exception(f'Error fetching contract: {data['message']}')
+        raise Exception(f'Error fetching contract: {data["message"]}')
 
 
 def fetch_contract_from_snowscan(contract_address):
